@@ -31,8 +31,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Devise Gem
 gem 'devise'
+# Print ruby objects with color and indentation
 gem 'awesome_print'
+# Sidekiq for background processing
+gem 'sidekiq'
+# For sending emails in the background
+gem 'devise-async', '~> 0.10.1'
+# Puma web server
+gem 'puma'
 
 gem 'rails_12factor', group: :production
 
