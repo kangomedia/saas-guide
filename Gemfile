@@ -41,6 +41,10 @@ gem 'sidekiq'
 gem 'devise-async', '~> 0.10.1'
 # Puma web server
 gem 'puma'
+# Bootstrap Sass for styling
+gem 'bootstrap-sass', '~> 3.3.6'
+# Rails forms made easy
+gem 'simple_form'
 
 gem 'rails_12factor', group: :production
 
