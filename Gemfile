@@ -45,6 +45,8 @@ gem 'puma'
 gem 'bootstrap-sass', '~> 3.3.6'
 # Rails forms made easy
 gem 'simple_form'
+# Gem Stripe for paymet processing
+gem 'stripe'
 
 gem 'rails_12factor', group: :production
 
