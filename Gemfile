@@ -47,6 +47,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 # Gem Stripe for paymet processing
 gem 'stripe'
+# Stripe webhook integration for Rails applications
+gem 'stripe_event'
 
 gem 'rails_12factor', group: :production
 
