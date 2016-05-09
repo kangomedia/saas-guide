@@ -49,6 +49,10 @@ gem 'simple_form'
 gem 'stripe'
 # Stripe webhook integration for Rails applications
 gem 'stripe_event'
+# Multitenancy for Rails and ActiveRecord
+gem 'apartment'
+# Store the current tenant in Sidekiq.
+gem 'apartment-sidekiq'
 
 gem 'rails_12factor', group: :production
 
