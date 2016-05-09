@@ -53,12 +53,17 @@ gem 'stripe_event'
 gem 'apartment'
 # Store the current tenant in Sidekiq.
 gem 'apartment-sidekiq'
+# An invitation strategy for devise
+gem 'devise_invitable'
 
 gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  # Preview mail in the browser instead of sending.
+  gem "letter_opener"
 end
 
 group :development do
