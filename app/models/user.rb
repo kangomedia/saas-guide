@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   		return false unless self.errors[:email].empty?
 
   		unless Account.find_by_email(email).nil?
-  			errors.add(:email, " is already used.")
+  			errors.add(:email, " is already used")
   		end
   	end
 
