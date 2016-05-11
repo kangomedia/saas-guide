@@ -55,6 +55,8 @@ gem 'apartment'
 gem 'apartment-sidekiq'
 # An invitation strategy for devise
 gem 'devise_invitable'
+# Very simple Roles library
+gem "rolify"
 
 gem 'rails_12factor', group: :production
 
