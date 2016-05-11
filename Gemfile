@@ -57,6 +57,8 @@ gem 'apartment-sidekiq'
 gem 'devise_invitable'
 # Very simple Roles library
 gem "rolify"
+# CanCan is an authorization library for Ruby on Rails
+gem 'cancancan', '~> 1.10'
 
 gem 'rails_12factor', group: :production
 
