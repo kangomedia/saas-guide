@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_inviter!
     unless current_user.has_role? :app_admin
-      redirect_to root_url, :alert => "Access Denied"
+      redirect_to root_url, :alert => "You are not authorized to access this page."
       return
     end
     super
