@@ -12,3 +12,64 @@
 
 <%= link_to 'Edit', edit_weather_grid_path(@weather_grid) %> |
 <%= link_to 'Back', weather_grids_path %>
+
+<div class="container">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title"><%= @weather_grid.name %></h3>
+		</div>
+
+		<%# Show all weather locations here %>
+
+		<% @weather_info.each_with_index do |weather_info, index| %>
+
+			<% if index % 2 == 0 %>
+			<%# Open the row here %>
+			<div class="row">
+			<% end %>
+				<div class="col-sm-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<%= weather_info['location'].city %> [<%= weather_info['location'].latitude %>, <%= weather_info['location'].longitude %>]
+						</div>
+
+						<% css = forecast_to_css_mapping(weather_info['weather'].currently.icon) %>
+
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3">
+								<div class="weather_summary">
+									<h4><%= weather_info['weather'].currently.summary %></h4>
+								</div>
+							</div>
+							<div class="col-sm-4 col-sm-offset-4">
+								<div class="weather_icon <%= css %>" >
+								</div>
+							</div>
+						</div>
+
+
+						<div class="row">
+							<div class="col-sm-10">
+								<%= weather_info['weather'].hourly.summary %>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-10">
+								<%= weather_info['weather'].daily.summary %>
+							</div>
+						</div>				
+
+					</div>
+				</div>
+			
+			<% if index % 2 != 0 %>
+			<%# Close the row here %>
+			</div>
+			<% end %>
+		<% end %>
+
+	</div>
+
+</div>
+<a href="http://forecast.io">Powered by Forecast</a>

@@ -20,9 +20,18 @@
         <td><%= weather_location.latitude %></td>
         <td><%= weather_location.longitude %></td>
         <td><%= weather_location.city %></td>
-        <td><%= link_to 'Show', weather_location %></td>
-        <td><%= link_to 'Edit', edit_weather_location_path(weather_location) %></td>
-        <td><%= link_to 'Destroy', weather_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <% if can? :read, WeatherLocation %>
+          <td><%= link_to 'Show', weather_location %></td>
+        <% end %>
+
+        <% if can? :update, weather_location %>
+          <td><%= link_to 'Edit', edit_weather_location_path(weather_location) %></td>
+        <% end %>
+
+        <% if can? :delete, weather_location %>
+          <td><%= link_to 'Destroy', weather_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

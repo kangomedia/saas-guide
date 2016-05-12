@@ -1,10 +1,11 @@
 class WeatherLocationsController < ApplicationController
   before_action :set_weather_location, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource param_method: :weather_location_params
 
   # GET /weather_locations
   # GET /weather_locations.json
   def index
-    @weather_locations = WeatherLocation.all
+    # @weather_locations = WeatherLocation.all
   end
 
   # GET /weather_locations/1
@@ -14,7 +15,7 @@ class WeatherLocationsController < ApplicationController
 
   # GET /weather_locations/new
   def new
-    @weather_location = WeatherLocation.new
+    # @weather_location = WeatherLocation.new
   end
 
   # GET /weather_locations/1/edit
@@ -24,7 +25,7 @@ class WeatherLocationsController < ApplicationController
   # POST /weather_locations
   # POST /weather_locations.json
   def create
-    @weather_location = WeatherLocation.new(weather_location_params)
+    # @weather_location = WeatherLocation.new(weather_location_params)
 
     respond_to do |format|
       if @weather_location.save

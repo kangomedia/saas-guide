@@ -59,6 +59,8 @@ gem 'devise_invitable'
 gem "rolify"
 # CanCan is an authorization library for Ruby on Rails
 gem 'cancancan', '~> 1.10'
+# forecast.io API wrapper in Ruby.
+gem 'forecast_io'
 
 gem 'rails_12factor', group: :production
 

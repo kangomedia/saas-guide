@@ -17,6 +17,7 @@
 	<% unless current_user.nil? %>
 		<% if current_user.has_role? :app_admin %>
 			<%= link_to('Invite User', new_user_invitation_path) %>
+			<%= link_to('Weather Grids', weather_grids_path) %>
 		<% end %>
 	<% end %>
 <% end %>
