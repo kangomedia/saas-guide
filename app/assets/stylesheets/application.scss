@@ -10,14 +10,27 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require climacons-font
+ *
  */
 
  // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "subscriptions";
-@import "climacons-font.css";
 @import "weather_grids";
+
+@font-face {
+	font-family: 'Climacons-Font';
+	src:font-url('climacons-webfont.eot');
+	src:ufont-rl('climacons-webfont.eot?#iefix') format('embedded-opentype'),
+		font-url('climacons-webfont.svg#Climacons-Font') format('svg'),
+		font-url('climacons-webfont.woff') format('woff'),
+		font-url('climacons-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
 	padding: 20px;
 }
